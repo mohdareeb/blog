@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>showPopUp();</script>
+    
+</body>
+<script>
+    function showPopUp() {
+    var cookie = $.cookie('the_cookie');
+    if(!cookie){
+        alert(" Please view this in Firefox");
+        $.cookie('the_cookie', 'the_value');
+    }
+}
+
+</script>
+</html>
+
+
+$('<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>').alert()
